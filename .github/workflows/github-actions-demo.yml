@@ -15,7 +15,10 @@ jobs:
         
     - name: Setup Gradle
       uses: gradle/gradle-build-action@v2
+      with:
+        arguments: build
+        build-root-directory: java-project-71/app 
     
-    - name: Execute Gradle build!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    - name: Execute Gradle build!
       run: ./gradlew build
       
