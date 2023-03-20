@@ -26,7 +26,7 @@ public class DifferTest {
         String filepath2 = "src/test/resources/notEmptyFile1.json";
         assertEquals("{\n"
             + " + follow: false\n"
-            + " + host: hexlet.io\n"
+            + " + host: hexlet.iooo\n"
             + " + proxy: 123.234.53.22\n"
             + " + timeout: 50\n"
             + "}", Differ.generate(filepath1, filepath2));
