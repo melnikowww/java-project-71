@@ -2,6 +2,8 @@ plugins {
     id 'java'
     id 'checkstyle'
     id 'application'
+    id 'jacoco'
+
 }
 
 application {
@@ -21,7 +23,7 @@ dependencies {
     implementation 'info.picocli:picocli:4.7.1'
     annotationProcessor 'info.picocli:picocli-codegen:4.7.1'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
-    testImplementation("org.assertj:assertj-core:3.22.0")
+    testImplementation "org.assertj:assertj-core:3.22.0"
 }
 
 test {
@@ -37,3 +39,9 @@ checkstyle {
     toolVersion '9.2.1'
 //    configFile = rootProject.file("${rootDir}/config/checkstyle/checkstyle.xml")
 }
+
+jacoco {
+    toolVersion = "0.8.8"
+    reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
+}
+
