@@ -1,5 +1,5 @@
-name: Run Gradle on PRs
-on: pull_request
+name: MyOwnActions
+on: push
 jobs:
   gradle:
     strategy:
@@ -11,10 +11,14 @@ jobs:
     - uses: actions/setup-java@v3
       with:
         distribution: temurin
-        java-version: 11
+        java-version: 17
         
     - name: Setup Gradle
       uses: gradle/gradle-build-action@v2
+      with:
+        arguments: build
+        build-root-directory: app 
     
-    - name: Execute Gradle build
+    - name: Execute Gradle build!
       run: ./gradlew build
+      
