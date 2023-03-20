@@ -14,4 +14,9 @@ jobs:
       uses: gradle/gradle-build-action@v2
       with:
         arguments: build
-        build-root-directory: app     
+        build-root-directory: app 
+    - uses: paambaati/codeclimate-action@v2.2.4
+      env:
+        CC_TEST_REPORTER_ID: 7ce9939edc5855026f513fa9753128408de0aa363b6ade6baed905e424a4e322
+      with:
+        coverageCommand: coverage
