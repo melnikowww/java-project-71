@@ -5,9 +5,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
-
-
+import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
 public class Differ {
     public static String generate(String fpath1, String fpath2) throws Exception {
 
@@ -53,7 +54,7 @@ public class Differ {
         Path path = Paths.get(fpath).toAbsolutePath().normalize();
         if (!Files.exists(path)) {
             throw new Exception("File '" + path + "' does not exist!");
-            }
+        }
         return path;
     }
 }
