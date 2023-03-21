@@ -19,9 +19,7 @@ jobs:
       uses: paambaati/codeclimate-action@v3.0.0 
       env:
        CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
-       #JACOCO_SOURCE_PATH: ./app/src/main/java/hexlet/code
-       JACOCO_SOURCE_PATH: src/main/java/hexlet/code ./cc-test-reporter \  
-       format-coverage: target/site/jacoco/jacoco.xml\--input-type jacoco ./cc-test-reporter upload-coverage
+       JACOCO_SOURCE_PATH: ./app/src/main/java/hexlet/code --id CC_TEST_REPORTER_ID
       with:
        coverageCommand: make report
        workingDirectory: app
