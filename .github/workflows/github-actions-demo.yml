@@ -28,5 +28,5 @@ jobs:
           JACOCO_SOURCE_PATH: ./app/src/main/java
         with:
           coverageCommand: make report
-          uses: cc-test-reporter after-build 
+          uses: cc-test-reporter after-build -e
           coverageLocations: ${{github.workspace}}/app/build/reports/jacoco/test/jacocoTestReport.xml:jacoco
