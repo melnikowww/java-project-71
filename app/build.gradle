@@ -38,7 +38,7 @@ compileJava {
 
 checkstyle {
     toolVersion '9.2.1'
-//    configFile = rootProject.file("${rootDir}/config/checkstyle/checkstyle.xml")
+    configFile = rootProject.file("${rootDir}/config/checkstyle/checkstyle.xml")
 }
 
 jacoco {
