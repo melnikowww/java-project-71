@@ -27,8 +27,8 @@ jobs:
           CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
           JACOCO_SOURCE_PATH: ./app/src/main/java
         with:
-          coverageCommand: make report
+          coverageCommand: make -C report --upload-coverage
           #cc-test-reporter: after-build --coverage
-          debug: true
-          upload-coverage: true
+          #debug: true
+          #upload-coverage: true
           coverageLocations: ${{github.workspace}}/build/customJacocoReportDir/test/jacocoTestReport.xml:jacoco
