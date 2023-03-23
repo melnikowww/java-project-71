@@ -30,4 +30,5 @@ jobs:
           coverageCommand: make report
           #cc-test-reporter: after-build --coverage
           debug: true
+          upload-coverage: true
           coverageLocations: ${{github.workspace}}/app/build/customJacocoReportDir/test/jacocoTestReport.xml:jacoco
