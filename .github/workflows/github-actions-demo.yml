@@ -26,7 +26,8 @@ jobs:
         env:
           #CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
           CC_TEST_REPORTER_ID: 96c2289b97308bb2930bd7a30d3fbea565346f758ec643aa745e7ec86f1e1552
-          JACOCO_SOURCE_PATH: ./app/src/main/java
+          #JACOCO_SOURCE_PATH: ./app/src/main/java
+          JACOCO_SOURCE_PATH: ./app/src/main/java ./cc-test-reporter\format-coverage target/site/jacoco/jacoco.xml\ --input-type jacoco./cc-test-reporter upload-coverage
         with:
           coverageCommand: make report --upload-coverage
           #cc-test-reporter: after-build --coverage
