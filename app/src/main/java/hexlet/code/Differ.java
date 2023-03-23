@@ -40,7 +40,6 @@ public class Differ {
         }
         return "{" + "\n" + String.join("\n", result) + "\n" + "}";
     }
-
     public static Path makePath(String fpath) throws Exception {
         Path path = Paths.get(fpath).toAbsolutePath().normalize();
         if (!Files.exists(path)) {
