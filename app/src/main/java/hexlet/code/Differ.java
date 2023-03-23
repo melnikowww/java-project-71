@@ -27,7 +27,8 @@ public class Differ {
             } else {
                 if (makeMap(fpath1).containsKey(item)) {
                     if (!makeMap(fpath1).get(item).equals(makeMap(fpath2).get(item))) {
-                        result.add(" - " + item + ": " + makeMap(fpath1).get(item) + "\n" + " + " + item + ": " + makeMap(fpath2).get(item));
+                        result.add(" - " + item + ": " + makeMap(fpath1).get(item) + "\n"
+                            + " + " + item + ": " + makeMap(fpath2).get(item));
                     } else {
                         result.add("   " + item + ": " + makeMap(fpath2).get(item));
                     }
