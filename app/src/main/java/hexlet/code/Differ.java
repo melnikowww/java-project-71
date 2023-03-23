@@ -12,15 +12,8 @@ import java.util.Collections;
 public class Differ {
     public static String generate(String fpath1, String fpath2) throws Exception {
 
-        String content = Files.readString(makePath(fpath1));
-        ObjectMapper objectMapper = new ObjectMapper();
-        Map<String, String> map1 = objectMapper.readValue(content, new TypeReference<>() {
-        });
-
-        String content2 = Files.readString(makePath(fpath2));
-        ObjectMapper objectMapper1 = new ObjectMapper();
-        Map<String, String> map2 = objectMapper1.readValue(content2, new TypeReference<>() {
-        });
+        Map<String, String> map1 = makeMap(fpath1);
+        Map<String, String> map2 = makeMap(fpath2);
 
         List<String> sortedKeys = new ArrayList<>(map1.keySet());
         for (String item:map2.keySet()) {
@@ -56,6 +49,11 @@ public class Differ {
             throw new Exception("File '" + path + "' does not exist!");
         }
         return path;
+    }
+    public static Map<String, String> makeMap(String path) throws Exception {
+        String content = Files.readString(makePath(path));
+        ObjectMapper objectMapper = new ObjectMapper();
+        return objectMapper.readValue(content, new TypeReference<>() { });
     }
 }
 
