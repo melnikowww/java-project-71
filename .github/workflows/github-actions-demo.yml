@@ -28,4 +28,6 @@ jobs:
           JACOCO_SOURCE_PATH: ./app/src/main/java
         with:
           coverageCommand: make report
+          #cc-test-reporter: after-build --coverage
+          debug: true
           coverageLocations: ${{github.workspace}}/app/build/test-results/test/TEST-hexlet.code.DifferTest.xml:jacoco
