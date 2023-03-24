@@ -3,7 +3,7 @@ plugins {
     id 'checkstyle'
     id 'application'
     id 'jacoco'
-
+    id 'com.adarshr.test-logger' version '3.1.0'
 }
 
 application {
@@ -51,4 +51,8 @@ jacocoTestReport {
         xml.required = true
         html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
     }
+}
+
+testlogger {
+    showStandardStreams true
 }
