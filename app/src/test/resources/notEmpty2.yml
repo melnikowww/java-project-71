@@ -1,0 +1,8 @@
+{
+  "setting1": "Some_value",
+  "setting2": 200,
+  "setting3": true,
+  "numb2": [22, 33, 44, 55],
+  "default": null,
+  "chars1": ["a", "b", "d"]
+}

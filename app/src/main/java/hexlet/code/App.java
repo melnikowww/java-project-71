@@ -4,7 +4,6 @@ import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Parameters;
 import picocli.CommandLine.Option;
-import java.io.File;
 import java.util.concurrent.Callable;
 
 @Command(name = "gendiff",
@@ -18,19 +17,19 @@ class App implements Callable<Integer> {
     @Parameters(paramLabel = "filepath2", index = "1", description = "path to second file.")
     private String filepath2;
 
-    @Option(names = { "-f", "--format" }, paramLabel = "format", description = "output format [default: stylish]")
-    File archive;
+    @Option(names = { "-f", "--format" }, defaultValue = "stylish", paramLabel = "format",
+        description = "output format [default: stylish]")
+    public String format;
     @Override
-    public Integer call() throws Exception {
+    public Integer call() {
         try {
-            System.out.println(Differ.generate(filepath1, filepath2));
+            System.out.println(Differ.generate(filepath1, filepath2, format));
         } catch (Exception e) {
-            System.out.println("Нет файлика то такого...");
+            System.out.println("Что-то пошло не так...");
         }
-
         return 0;
     }
-    public static void main(String... args) throws Exception {
+    public static void main(String... args) {
         int exitCode = new CommandLine(new App()).execute(args);
         System.exit(exitCode);
     }
