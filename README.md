@@ -6,3 +6,4 @@
 [|Step 7. YAML|](https://asciinema.org/a/xTAQuzY2Ku6e4bPzX5rmX5q9O)
 [|Step 8. FORMATTER|](https://asciinema.org/a/3Y8AxCe8CQTbWOGHGIHBfpPFq)
 [|Step 9. PLAIN|](https://asciinema.org/a/A51KdJdfp6LGhhL59Ysx8CycE)
+[|Step 10. JSON out|](https://asciinema.org/a/0CEUGudjd7Kwbr2g51iJpp4eD)
