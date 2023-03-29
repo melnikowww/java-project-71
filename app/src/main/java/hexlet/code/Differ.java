@@ -1,8 +1,9 @@
 package hexlet.code;
-import java.util.Map;
-import java.util.List;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Differ {
     public static String generate(String fpath1, String fpath2, String format) throws Exception {
@@ -13,7 +14,7 @@ public class Differ {
                 keys.add(item);
             }
         }
-        Map<String, List<String>> resultMap = new HashMap<>();
+        Map<String, List<Object>> resultMap = new HashMap<>();
 
         for (String item: keys) {
             if (!Parser.makeMap(fpath2).containsKey(item)) {
@@ -27,13 +28,6 @@ public class Differ {
                 resultMap.put(item, List.of("", Parser.makeItem(fpath2, item)));
             }
         }
-        String res;
-        switch (format) {
-            default:
-                res = Stylish.format(resultMap);
-        }
-        return res;
+        return Formatter.chooseFormat(resultMap, format);
     }
 }
-
-

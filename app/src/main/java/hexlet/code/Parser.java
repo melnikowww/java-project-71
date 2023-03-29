@@ -21,9 +21,9 @@ public class Parser {
         ObjectMapper objectMapper = new ObjectMapper();
         return objectMapper.readValue(content, new TypeReference<>() { });
     }
-    public static String makeItem(String path, String key) throws Exception {
+    public static Object makeItem(String path, String key) throws Exception {
         if (makeMap(path).get(key) != null) {
-            return makeMap(path).get(key).toString();
+            return makeMap(path).get(key);
         } else {
             return "null";
         }

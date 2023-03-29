@@ -1,6 +1,6 @@
 {
   "setting1": "Some_value",
-  "setting2": 200,
+  "setting2": 201,
   "setting3": true,
   "numb2": [22, 33, 44, 55],
   "default": null,
