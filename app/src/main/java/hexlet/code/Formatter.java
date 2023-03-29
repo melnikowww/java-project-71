@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import formatters.Json;
 import formatters.Plain;
 import formatters.Stylish;
 
@@ -8,11 +9,10 @@ import java.util.Map;
 
 public class Formatter {
     public static String chooseFormat(Map<String, List<Object>> data, String format) {
-        switch (format) {
-            case "plain" :
-                return Plain.format(data);
-            default:
-                return Stylish.format(data);
-        }
+        return switch (format) {
+            case "plain" -> Plain.format(data);
+            case "json" -> Json.format(data);
+            default -> Stylish.format(data);
+        };
     }
 }
