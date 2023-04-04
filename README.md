@@ -1,3 +1,8 @@
+># Проект "Вычислитель отличий"
+## Возможности
+* Поиск отличий в JSON файлах
+* Поиск отличий в YAML файлах
+* Вывод в различных форматах
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/melnikowww/java-project-71/workflows/hexlet-check/badge.svg)](https://github.com/melnikowww/java-project-71/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/bee20d954b59995fa001/maintainability)](https://codeclimate.com/github/melnikowww/java-project-71/maintainability)
@@ -14,8 +19,3 @@
 [|Step 10. JSON out|](https://asciinema.org/a/0CEUGudjd7Kwbr2g51iJpp4eD)
 
 
-># Проект "Вычислитель отличий"
-## Возможности
-* Поиск отличий в JSON файлах
-* Поиск отличий в YAML файлах
-* Вывод в различных форматах
