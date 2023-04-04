@@ -25,7 +25,7 @@ class App implements Callable<Integer> {
         try {
             System.out.println(Differ.generate(filepath1, filepath2, format));
         } catch (Exception e) {
-            System.out.println("Что-то пошло не так...");
+            System.out.println("Что-то пошло не так..." + e.getMessage());
         }
         return 0;
     }

@@ -1,0 +1,5 @@
+Property 'chars1' was updated. From [complex value] to [complex value]
+Property 'numb2' was added with value: [complex value]
+Property 'numbers1' was removed
+Property 'setting1' was updated. From 'Some value' to 'Some_value'
+Property 'setting2' was updated. From 200 to 201

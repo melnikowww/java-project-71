@@ -1,0 +1,12 @@
+{
+  - chars1: [a, b, c]
+  + chars1: [a, b, d]
+    default: null
+  + numb2: [22, 33, 44, 55]
+  - numbers1: [1, 2, 3, 4]
+  - setting1: Some value
+  + setting1: Some_value
+  - setting2: 200
+  + setting2: 201
+    setting3: true
+}
