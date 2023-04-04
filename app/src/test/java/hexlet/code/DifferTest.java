@@ -32,7 +32,6 @@ public class DifferTest {
         resultPlain = readFixture("plainResult.txt");
         resultStylish = readFixture("resultStylish.txt");
     }
-
     @Test
     public void emptyDiffTestYAML() throws Exception {
         String filepath1 = "src/test/resources/empty.yml";
@@ -44,14 +43,12 @@ public class DifferTest {
         String filepath2 = "src/test/resources/notEmpty2.yml";
         assertEquals(resultStylish, Differ.generate(filepath1, filepath2, "stylish"));
     }
-
     @Test
     public void plainFormatterTest() throws Exception {
         String filepath1 = "src/test/resources/notEmpty1.yml";
         String filepath2 = "src/test/resources/notEmpty2.yml";
         assertEquals(resultPlain, Differ.generate(filepath1, filepath2, "plain"));
     }
-
     @Test
     public void emptyPlainFormatterTest() throws Exception {
         String filepath1 = "src/test/resources/empty.yml";
