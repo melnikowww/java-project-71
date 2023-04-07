@@ -1,7 +1,8 @@
 {
   - chars1: [a, b, c]
   + chars1: [a, b, d]
-    default: null
+  - default: 5
+  + default: null
   + numb2: [22, 33, 44, 55]
   - numbers1: [1, 2, 3, 4]
   - setting1: Some value

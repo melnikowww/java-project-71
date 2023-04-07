@@ -3,9 +3,10 @@ package hexlet.code;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+//import java.util.ArrayList;
+
+//import java.util.Collections;
+//import java.util.List;
 import java.util.Map;
 
 public class Differ {
@@ -16,16 +17,8 @@ public class Differ {
         Map<String, Object> dataMap1 = Parser.makeMap(path1);
         Map<String, Object> dataMap2 = Parser.makeMap(path2);
 
-        List<String> keys = new ArrayList<>(dataMap1.keySet());
-        for (String item: dataMap2.keySet()) {
-            if (!keys.contains(item)) {
-                keys.add(item);
-            }
-        }
-
-        Collections.sort(keys);
-        Map<String, Map<String, Object>> resultMap = GenDiff.genDiff(keys, dataMap1, path1, dataMap2, path2);
-        return Formatter.chooseFormat(resultMap, format, keys);
+        Map<String, Map<String, Object>> resultMap = GenDiff.genDiff(dataMap1, dataMap2);
+        return Formatter.chooseFormat(resultMap, format);
     }
     public static Path makePath(String fpath) throws Exception {
         Path path = Paths.get(fpath).toAbsolutePath().normalize();

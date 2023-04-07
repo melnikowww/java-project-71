@@ -1,1 +1,1 @@
-{"proxy":{"unchanged":"123.234.53.22"},"host":{"unchanged":"hexlet.io"},"follow":{"removed":false},"timeout":{"added":50}}
+{"follow":{"removed":false},"host":{"removed":"hexlet.io","added":"hexlet.iooo"},"proxy":{"unchanged":"123.234.53.22"},"timeout":{"added":50}}
