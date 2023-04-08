@@ -1,10 +1,10 @@
 package hexlet.code.formatters;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-import static hexlet.code.formatters.Util.makePlainString;
 
 public class Plain {
     public static String format(Map<String, Map<String, Object>> data) {
@@ -24,5 +24,18 @@ public class Plain {
             }
         }
         return String.join("\n", result);
+    }
+    public static String makePlainString(Object it) {
+        if (it instanceof Collection<?> || it instanceof Map<?, ?>) {
+            return "[complex value]";
+        }
+        if (it == null) {
+            return "null";
+        }
+        if (it instanceof String) {
+            return "\'" + it + "\'";
+        } else {
+            return it.toString();
+        }
     }
 }

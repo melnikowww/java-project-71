@@ -1,0 +1,1 @@
+{"chars1":{"removed":["a","b","c"],"added":["a","b","d"]},"default":{"removed":5,"added":null},"numb2":{"added":[22,33,44,55]},"numbers1":{"removed":[1,2,3,4]},"setting1":{"removed":"Some value","added":"Some_value"},"setting2":{"removed":200,"added":201},"setting3":{"unchanged":true}}

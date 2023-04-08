@@ -1,5 +1,8 @@
 {
-  "host": "hexlet.iooo",
-  "timeout": 50,
-  "proxy": "123.234.53.22"
+  "setting1": "Some_value",
+  "setting2": 201,
+  "setting3": true,
+  "numb2": [22, 33, 44, 55],
+  "default": null,
+  "chars1": ["a", "b", "d"]
 }
