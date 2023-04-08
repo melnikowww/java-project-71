@@ -28,7 +28,7 @@ public class Stylish {
             if (data.get(property).containsKey("removed") && data.get(property).containsKey("added")) {
                 result.add(" ".repeat(smallSpace) + "- " + property + ": "
                     + data.get(property).get("removed"));
-                result.add(" ".repeat(tab) + "+ " + property + ": "
+                result.add(" ".repeat(smallSpace) + "+ " + property + ": "
                     + data.get(property).get("added"));
             }
         }
