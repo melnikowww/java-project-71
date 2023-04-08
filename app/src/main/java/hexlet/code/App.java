@@ -19,7 +19,7 @@ class App implements Callable<Integer> {
 
     @Option(names = { "-f", "--format" }, defaultValue = "stylish", paramLabel = "format",
         description = "output format [default: stylish]")
-    public String format;
+    private String format;
     @Override
     public Integer call() {
         try {
