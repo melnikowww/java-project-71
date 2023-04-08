@@ -3,10 +3,6 @@ package hexlet.code;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-//import java.util.ArrayList;
-
-//import java.util.Collections;
-//import java.util.List;
 import java.util.Map;
 
 public class Differ {
@@ -21,7 +17,7 @@ public class Differ {
         return Formatter.chooseFormat(resultMap, format);
     }
     public static String generate(String fpath1, String fpath2) throws Exception {
-        return generate(fpath1, fpath2, "stylish");
+        return generate(fpath1, fpath2, "plain");
     }
     public static Path makePath(String fpath) throws Exception {
         Path path = Paths.get(fpath).toAbsolutePath().normalize();
