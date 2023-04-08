@@ -6,7 +6,7 @@ import java.util.Map;
 public class Stylish {
     public static String format(Map<String, Map<String, Object>> data) {
         int smallSpace = 2;
-        int tab = 4;
+        int tab = smallSpace * 2;
         List<String> result = new ArrayList<>();
         if (data.isEmpty()) {
             return "{\n\n}";
