@@ -29,7 +29,7 @@ helpMe:
 	./build/install/app/bin/app -h
 
 files:
-	./build/install/app/bin/app src/test/resources/file1.yml src/test/resources/file2.yml
+	./build/install/app/bin/app src/test/resources/file11.yml src/test/resources/file22.yml
 
 .PHONY: build
 

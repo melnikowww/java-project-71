@@ -9,8 +9,8 @@ public class Differ {
     public static String generate(String fpath1, String fpath2, String format) throws Exception {
         Path path1 = makePath(fpath1);
         Path path2 = makePath(fpath2);
-        String extension1 = fpath1.substring(fpath1.lastIndexOf("."));
-        String extension2 = fpath1.substring(fpath1.lastIndexOf("."));
+        String extension1 = getDataFormat(fpath1);
+        String extension2 = getDataFormat(fpath2);
 
         Map<String, Object> dataMap1 = Parser.parse(Files.readString(path1), extension1);
         Map<String, Object> dataMap2 = Parser.parse(Files.readString(path2), extension2);
@@ -27,5 +27,9 @@ public class Differ {
             throw new Exception("File '" + path + "' does not exist!");
         }
         return path;
+    }
+    public static String getDataFormat(String path) {
+        int index = path.lastIndexOf(".");
+        return index > 0 ? path.substring(index + 1) : "";
     }
 }
