@@ -30,7 +30,7 @@ public class DifferTest {
     }
     @ParameterizedTest
     @ValueSource(strings = {"json", "yml"})
-    public void generateTest(String format) throws Exception {
+    public final void generateTest(String format) throws Exception {
         String filePath1 = "src/test/resources/file1." + format;
         String filePath2 = "src/test/resources/file2." + format;
 
